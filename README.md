@@ -1,16 +1,32 @@
-# React + Vite
+# CuidarBem 🩺
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web para monitoramento de saúde pessoal, desenvolvida com React e Vite.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Registro de medições de saúde (pressão arterial, glicemia e batimentos cardíacos)
+- Histórico de registros com data e hora
+- Alerta visual para valores fora do intervalo normal
 
-## React Compiler
+## Tecnologias utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript
+- Vite
+- CSS
 
-## Expanding the ESLint configuration
+## Como rodar o projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+bash
+# Instalar dependências
+npm install
+
+# Rodar em desenvolvimento
+npm run dev
+
+
+Acesse http://localhost:5173 no navegador.
+
+## Sobre o projeto
+
+Projeto desenvolvido para praticar React na prática, com contexto real da área da saúde.
