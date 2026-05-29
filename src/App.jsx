@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Formulario from './components/Formulario'
+import ListaRegistros from './components/ListaRegistros'
 
 function App() {
     const [registros, setRegistros] = useState([])
@@ -10,14 +11,14 @@ function App() {
         id: Date.now(),
         data: new Date().toLocaleString('pt-BR')
       }
-      setRegistros([...registros, registro])
+      setRegistros([registro, ...registros])
     }
 
     return (
       <div>
         <h1>CuidarBem</h1>
         <Formulario onRegistrar={handleRegistrar} />
-        <p>Total de registros: {registros.length}</p>
+        <ListaRegistros registros={registros} />
       </div>
     )
   }
