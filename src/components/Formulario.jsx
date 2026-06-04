@@ -22,8 +22,8 @@ function Formulario({ onRegistrar }) {
             </select>
 
             <input
-                type="number"
-                placeholder="Digite o valor"
+                type={tipo === 'pressao' ? 'text' : 'number'}
+                placeholder={tipo === 'pressao' ? 'Ex: 120/80' : 'Valor'}
                 value={valor}
                 onChange={(e) => setValor(e.target.value)}
             />

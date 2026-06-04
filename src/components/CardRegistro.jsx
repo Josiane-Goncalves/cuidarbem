@@ -1,23 +1,40 @@
+import { avaliarValor } from '../utils'
+
 function CardRegistro({ registro }) {
-    const nomes = {
-        pressao: 'Pressão Arterial',
-        glicemia: 'Glicemia',
-        batimentos: 'Batimentos Cardíacos',
-    }
+  const nomes = {
+    pressao: 'Pressão Arterial',
+    glicemia: 'Glicemia',
+    batimento: 'Batimento Cardíaco'
+  }
 
-    const unidades = {
-        pressao: 'mmHg',
-        glicemia: 'mg/dL',
-        batimentos: 'bpm',
-    }
+  const unidades = {
+    pressao: '',
+    glicemia: 'mg/dL',
+    batimento: 'bpm'
+  }
 
-    return (
-        <div>
-            <strong>{nomes[registro.tipo]}</strong>
-            <span>{registro.valor} {unidades[registro.tipo]}</span>
-            <small>{registro.data}</small>
-        </div>
-    )
+  const status = avaliarValor(registro.tipo, registro.valor)
+
+  const mensagens = {
+    baixo: '🔵 Abaixo do normal',
+    normal: '✅ Normal',
+    atencao: '⚠️ Atenção',
+    critico: '🚨 Crítico',
+    invalido: '❌ Valor inválido'
+  }
+
+  const valorFormatado = registro.tipo === 'pressao'
+    ? `${registro.valor} mmHg`
+    : `${registro.valor} ${unidades[registro.tipo]}`
+
+  return (
+    <div className={`card card--${status}`}>
+      <strong>{nomes[registro.tipo]}</strong>
+      <span>{valorFormatado}</span>
+      <span>{mensagens[status]}</span>
+      <small>{registro.data}</small>
+    </div>
+  )
 }
 
 export default CardRegistro
