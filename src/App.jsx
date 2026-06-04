@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Formulario from './components/Formulario'
 import ListaRegistros from './components/ListaRegistros'
 
 function App() {
-    const [registros, setRegistros] = useState([])
+    const [registros, setRegistros] = useState(() => {
+      const salvos = localStorage.getItem('registros')
+      return salvos ? JSON.parse(salvos) : []
+    })
+
+    useEffect(() => {
+      localStorage.setItem('registros', JSON.stringify(registros))
+    }, [registros])
 
     function handleRegistrar(novoRegistro) {
       const registro = {
