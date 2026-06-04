@@ -1,6 +1,6 @@
 import { avaliarValor } from '../utils'
 
-function CardRegistro({ registro }) {
+function CardRegistro({ registro, onApagar }) {
   const nomes = {
     pressao: 'Pressão Arterial',
     glicemia: 'Glicemia',
@@ -33,6 +33,10 @@ function CardRegistro({ registro }) {
       <span>{valorFormatado}</span>
       <span>{mensagens[status]}</span>
       <small>{registro.data}</small>
+      <button onClick={() => {
+  console.log('Cliquei! ID:', registro.id)
+  onApagar(registro.id)
+}}>Apagar</button>
     </div>
   )
 }

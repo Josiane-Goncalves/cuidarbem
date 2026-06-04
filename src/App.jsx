@@ -21,11 +21,14 @@ function App() {
       setRegistros([registro, ...registros])
     }
 
+    function handleApagar(id) {
+      setRegistros(registros.filter((registro) => registro.id !== id))
+    }
     return (
       <div>
         <h1>CuidarBem</h1>
         <Formulario onRegistrar={handleRegistrar} />
-        <ListaRegistros registros={registros} />
+        <ListaRegistros registros={registros} onApagar={handleApagar} />
       </div>
     )
   }

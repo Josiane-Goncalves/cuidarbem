@@ -1,6 +1,6 @@
 import CardRegistro from './CardRegistro'
 
-function ListaRegistros({ registros }) {
+function ListaRegistros({ registros, onApagar }) {
     if (registros.length === 0) {
         return <p>Nenhum registro ainda. Adicione primeiro acima</p>
     }
@@ -9,7 +9,10 @@ function ListaRegistros({ registros }) {
         <div>
             <h2>Histórico de Registros</h2>
             {registros.map((registro) => (
-                <CardRegistro key={registro.id} registro={registro} />
+                <CardRegistro 
+                key={registro.id} 
+                registro={registro} 
+                onApagar={onApagar} />
             ))}
         </div>
     )
