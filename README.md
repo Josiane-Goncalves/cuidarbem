@@ -1,10 +1,10 @@
-markdown# CuidarBem 🩺
+CuidarBem 🩺
 
 Aplicação web para monitoramento de saúde pessoal. Permite registrar medições de pressão arterial, glicemia e batimentos cardíacos, com alertas visuais automáticos para valores fora do intervalo normal.
 
 🔗 **Acesse o app:** [cuidarbem-cinco.vercel.app](https://cuidarbem-cinco.vercel.app)
 
-![CuidarBem](./public/screenshots/cuidarbem.png)
+![CuidarBem](./public/screenshots/cuidarbem.png.png)
 
 ## Funcionalidades
 
