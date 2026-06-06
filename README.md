@@ -1,4 +1,4 @@
-# CuidarBem 🩺
+markdown# CuidarBem 🩺
 
 Aplicação web para monitoramento de saúde pessoal. Permite registrar medições de pressão arterial, glicemia e batimentos cardíacos, com alertas visuais automáticos para valores fora do intervalo normal.
 
